@@ -1,5 +1,8 @@
 # don't track the downloaded source packages
 cache/
 
+# don't track the finalized image files
+run/
+
 # ignore all info directories
 **/info
