@@ -1,0 +1,11 @@
+TARGETS = unattended-upgrades atd postfix urandom sendsigs rsyslog umountnfs.sh hwclock.sh rpcbind networking umountfs umountroot halt reboot
+sendsigs: atd postfix unattended-upgrades
+rsyslog: sendsigs atd postfix
+umountnfs.sh: sendsigs rsyslog atd postfix unattended-upgrades
+hwclock.sh: rsyslog atd
+rpcbind: umountnfs.sh
+networking: rpcbind postfix umountnfs.sh
+umountfs: rpcbind hwclock.sh urandom networking atd postfix umountnfs.sh unattended-upgrades
+umountroot: umountfs
+halt: umountroot
+reboot: umountroot

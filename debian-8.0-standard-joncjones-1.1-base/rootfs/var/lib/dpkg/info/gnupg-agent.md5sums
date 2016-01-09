@@ -1,0 +1,13 @@
+afd9bbaab2374a6342c37c76325c242d  usr/bin/gpg-agent
+a70e7c0c6bc4a70d96a929b7cc4871a9  usr/bin/gpg-connect-agent
+e4cfc27b4a6ef172720de9065c2e62ee  usr/bin/gpgkey2ssh
+4fa6e7cf91e26100eae300dd30527d9f  usr/bin/symcryptrun
+4f7a2de7caefacb2a53d68c6700e184a  usr/lib/gnupg2/gpg-preset-passphrase
+18ce04c368da9cb20d6012b4af7b7cb8  usr/lib/gnupg2/gpg-protect-tool
+c91c4a477ceb7daceb1f99e2659b08ff  usr/share/doc/gnupg-agent/changelog.Debian.gz
+4eecb291b10c99cf6ea635fba3c47477  usr/share/doc/gnupg-agent/changelog.gz
+f01b7f1b000485b8731e0015099c9fc6  usr/share/doc/gnupg-agent/copyright
+ef713950e5d11d32f183b79869017418  usr/share/man/man1/gpg-agent.1.gz
+6698d97b66dbfcf0cad8684c3ccfff4f  usr/share/man/man1/gpg-connect-agent.1.gz
+66d92d8e9b682e87530939d1c6d1c413  usr/share/man/man1/gpg-preset-passphrase.1.gz
+1313b5d5495aabbfc89cc1ae83fc1f4a  usr/share/man/man1/symcryptrun.1.gz

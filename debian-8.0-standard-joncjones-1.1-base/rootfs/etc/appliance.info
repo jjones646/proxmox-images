@@ -1,0 +1,11 @@
+Name: debian-8.0-standard-joncjones-1.0-base
+Version: 8.0-1.1
+Type: lxc
+OS: debian-8.0
+Section: system
+Maintainer: Jon Jones <jon@joncjones.com>
+Architecture: amd64
+Installed-Size: 642
+Infopage: http://pve.proxmox.com/wiki/Debian_Appliance_Builder
+Description: Debian 8.0 (Standard), JonCJones 1.1 (Base) Edition
+ A small Debian Lenny system including all standard packages with additional packages for network management, SSH is configured, and common environment files are installed.

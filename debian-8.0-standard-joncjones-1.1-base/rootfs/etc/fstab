@@ -1,0 +1,2 @@
+# UNCONFIGURED FSTAB FOR BASE SYSTEM
+//nfs1.joncjones.com/netshare /mnt/netshare     cifs    rw,guest,iocharset=utf8,soft,_netdev 0 0
