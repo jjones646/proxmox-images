@@ -1,6 +1,6 @@
 
 BUILDR = "$(patsubst %/,%,$(dir $(abspath $(lastword $(MAKEFILE_LIST)))))"
-IMAGES = debian-8.0-standard-joncjones-1.1-base
+IMAGES = debian-8.0-standard-joncjones-base
 TARGET = $(IMAGES)
 NETSHARE_ROOT = /netshare
 
