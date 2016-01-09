@@ -15,3 +15,6 @@ run/
 
 # ignore any public key files
 *.pub
+
+# ignore config files in sub directories
+/*/config
