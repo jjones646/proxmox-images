@@ -1,8 +1,0 @@
-mutt: setgid-binary usr/bin/mutt_dotlock 2755 root/mail
-mutt: arch-dep-package-has-big-usr-share
-mutt: menu-command-not-in-package usr/share/menu/mutt:5 usr/bin/mutt
-mutt: desktop-command-not-in-package usr/share/applications/mutt.desktop mutt
-mutt: statically-linked-binary usr/bin/mutt_dotlock
-mutt: doc-base-file-references-missing-file mutt:9 /usr/share/doc/mutt/manual.txt.gz
-mutt: doc-base-file-references-missing-file mutt:12 /usr/share/doc/mutt/html/manual.html
-mutt: doc-base-file-references-missing-file mutt:13 /usr/share/doc/mutt/html/*

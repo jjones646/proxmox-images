@@ -4,6 +4,9 @@ cache/
 # don't track the finalized image files
 run/
 
+# ignore the rootfs for all setups
+**/rootfs
+
 # ignore all info directories
 **/info
 
