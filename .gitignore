@@ -6,3 +6,6 @@ run/
 
 # ignore all info directories
 **/info
+
+# ignore log files
+*logfile
