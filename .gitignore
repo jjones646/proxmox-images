@@ -12,3 +12,6 @@ run/
 
 # ignore log files
 *logfile
+
+# ignore any public key files
+*.pub
