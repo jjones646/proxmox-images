@@ -30,9 +30,10 @@ all: info/init_ok
 	# Make sure our unattended-upgrades is setup correctly
 	dab exec echo 'APT::Periodic::Update-Package-Lists "1";' > /etc/apt/apt.conf.d/20auto-upgrades
 	dab exec echo 'APT::Periodic::Unattended-Upgrade "1";' >> /etc/apt/apt.conf.d/20auto-upgrades
-	# Setup default global git configuration
+	# Setup default global git configurations
 	dab exec git config --global user.name "Jonathan Jones"
 	dab exec git config --global user.email "jjones646@gmail.com"
+	dab exec git config --global push.default simple
 	# Finalize everything
 	dab finalize
 	
