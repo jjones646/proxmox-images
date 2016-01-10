@@ -1,10 +1,15 @@
 BASEDIR := $(shell dab basedir)
+IMG_NAME := $(shell dab packagefile)
+VER := "1.1"
+NAME := "base"
+DESC := "A small Debian Lenny system including all standard packages with additional packages for network management, SSH is configured, and common environment files are installed."
 
-all: info/init_ok
-	@echo "Target: $(TARGET_IMAGE)"
+.PHONY: clean dist-clean
+
+$(IMG_NAME): info/init_ok
 	dab bootstrap
 	# Extended set of packages
-	dab install ../common/base.pkglist
+	dab install $(PARENTPATH)/common/base.pkglist
 	# Allow default ssh key root access
 	dab exec mkdir -p -m 0700 /root/.ssh
 	install -m 0600 $(PARENTPATH)/common/watson.id_rsa.pub ${BASEDIR}/root/.ssh/authorized_keys
@@ -36,17 +41,20 @@ all: info/init_ok
 	dab exec git config --global push.default simple
 	# Finalize everything
 	dab finalize
+	mv $(IMG_NAME) ../run/
 	
 info/init_ok: dab.conf
 	dab init
 	touch $@
 
-.PHONY: clean
+dab.conf:
+	$(PARENTPATH)/common/gen-dab.sh $(VER) $(NAME) $(DESC) > dab.conf
+
 clean:
 	dab clean
+	rm -f dab.conf
 	rm -f *~
 
-.PHONY: dist-clean
 dist-clean:
 	dab dist-clean
 	rm -f *~
